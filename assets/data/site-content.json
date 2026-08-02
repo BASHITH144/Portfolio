@@ -1,0 +1,207 @@
+{
+  "header": {
+    "name": "BASITH AHAMAD",
+    "badge": "DEV",
+    "resume_url": "assets/files/Basith_Ahamad_Resume.pdf",
+    "download_btn_text": "DOWNLOAD CV",
+    "links": {
+      "github": "https://github.com/BASHITH144",
+      "linkedin": "https://www.linkedin.com/in/basith-ahamad",
+      "email": "mailto:bashithahamed79@gmail.com",
+      "phone": "tel:+94762657472"
+    }
+  },
+  "hero": {
+    "identity_titles": [
+      "WEB DEVELOPER",
+      "FRONT-END DEVELOPER",
+      "WORDPRESS DEVELOPER",
+      "SOFTWARE ENGINEER",
+      "AUTOMATION BUILDER"
+    ],
+    "main_statement": "HELLO! I'M BASITH, A SOFTWARE ENGINEER & AI BUILDER BUILDING WEB PLATFORMS, AI SYSTEMS & AUTOMATION FROM SRI LANKA.",
+    "skills_list": [
+      "Full-Stack Web Development (React / Laravel)",
+      "AI & Machine Learning (FastAPI / Computer Vision)",
+      "WordPress & Elementor Development",
+      "Business Automation (n8n Workflows)",
+      "UI/UX & Responsive Design"
+    ],
+    "metrics": [
+      {
+        "num": "1",
+        "suffix": "ST",
+        "label": "Class Honours - BSc"
+      },
+      {
+        "num": "10",
+        "suffix": "+",
+        "label": "Projects & AI"
+      },
+      {
+        "num": "20",
+        "suffix": "+",
+        "label": "Technologies & Frameworks"
+      },
+      {
+        "num": "3",
+        "suffix": "",
+        "label": "Academic Degrees & Diplomas"
+      }
+    ]
+  },
+  "about": {
+    "title": "I BUILD MODERN, SECURE, AND SCALABLE DIGITAL SOLUTIONS WITH A PASSION FOR WEB DEVELOPMENT",
+    "paragraph1": "I'm a passionate digital designer and web developer focused on creating user-centered digital experiences. I blend creativity with clean, efficient code to build websites that are not only visually appealing but also functional, fast, and reliable.",
+    "paragraph2": "With a strong eye for design & a solid technical foundation, I transform complex ideas into simple, intuitive digital solutions. I believe great design is purposefully laid out, interaction, and line of code is crafted to enhance usability and deliver real value.",
+    "paragraph3": "From concept to launch, I work closely with clients to understand their goals, audience and brand vision. My collaborative approach ensures each project reflects the client's identity with focused objectives and performance standards.",
+    "floating_badge_num": "15",
+    "floating_badge_suffix": "+"
+  },
+  "services": {
+    "badge": "EXPERTISE & SERVICES",
+    "title": "WHAT I DO",
+    "description": "From client sites to trained models. The day-to-day at Webxkey, plus what I build on my own time — Full-Stack Architecture, AI & ML Integration, and Business Workflow Automation.",
+    "items": [
+      {
+        "num": "01",
+        "title": "WordPress & Website Development",
+        "desc": "Responsive sites built with Elementor, custom themes, and clean performance. High speed, robust security, and SEO optimization."
+      },
+      {
+        "num": "02",
+        "title": "Laravel Application Development",
+        "desc": "POS, inventory, and business management systems built to run daily enterprise operations smoothly and reliably."
+      },
+      {
+        "num": "03",
+        "title": "AI & Machine Learning Integration",
+        "desc": "Computer vision and recommendation models wired into real products via FastAPI, TensorFlow, and Python microservices."
+      },
+      {
+        "num": "04",
+        "title": "Workflow Automation",
+        "desc": "n8n pipelines connecting WhatsApp API, webhooks, and third-party services to automate repetitive business tasks."
+      },
+      {
+        "num": "05",
+        "title": "UI/UX & Responsive Design",
+        "desc": "Interfaces that hold up across devices, browsers, and real user behavior, combining beauty with intuitive user flows."
+      },
+      {
+        "num": "06",
+        "title": "Poster & Visual Graphic Design",
+        "desc": "Eye-catching promotional posters, event flyers, and digital marketing assets designed to capture attention and communicate your brand clearly."
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": 1,
+      "slug": "valdore-estates",
+      "title": "Valdore Estates",
+      "summary": "Platform for real estate properties allowing users to explore listings and contact brokers directly.",
+      "tags": ["React", "Next.js", "Tailwind CSS"],
+      "image": "assets/Projects/Valdore Estates/Estate.png",
+      "live_url": "https://valdore-estates.vercel.app/",
+      "repo_url": "https://github.com/BASHITH144",
+      "year_or_status": "2026 · Web Platform",
+      "source": "https://basithahamad.vercel.app/"
+    },
+    {
+      "id": 2,
+      "slug": "maaz-advertising",
+      "title": "Maaz Advertising",
+      "summary": "Marketing agency website featuring services, portfolio, and contact information for prospective clients.",
+      "tags": ["React", "Next.js", "Tailwind CSS", "UI/UX"],
+      "image": "assets/Projects/Maaz Advertising/Maaz.png",
+      "live_url": "https://maazadvertising.vercel.app/",
+      "repo_url": "https://github.com/BASHITH144",
+      "year_or_status": "2026 · Client Web App",
+      "source": "https://basithahamad.vercel.app/"
+    },
+    {
+      "id": 3,
+      "slug": "herit-edge",
+      "title": "HERIT-EDGE",
+      "summary": "Multi‑vendor e‑commerce platform with Admin/Customer/Seller panels and AI-powered visual product recommendations via FastAPI + MobileNetV2.",
+      "tags": ["PHP", "MySQL", "Python", "FastAPI", "TensorFlow"],
+      "image": "assets/Projects/Heritedge/Herit-Edge.png",
+      "live_url": null,
+      "repo_url": "https://github.com/BASHITH144",
+      "year_or_status": "Final-Year Project · E‑Commerce",
+      "source": "https://basithahamad.vercel.app/"
+    },
+    {
+      "id": 4,
+      "slug": "saththar-feeds",
+      "title": "Saththar Feeds Billing System",
+      "summary": "Group project — smart pet shop / feed shop management with AI-assisted recommendations, invoicing and inventory tracking.",
+      "tags": ["Automation", "Billing", "Inventory"],
+      "image": "assets/Projects/Saththarfeeds/saththar_feeds.png",
+      "live_url": null,
+      "repo_url": null,
+      "year_or_status": "Group Project · Automation",
+      "source": "https://basithahamad.vercel.app/"
+    },
+    {
+      "id": 5,
+      "slug": "detectx",
+      "title": "DetectX (Plant Disease Detection)",
+      "summary": "AI web app to detect plant diseases from leaf images using MobileNetV2 and provide treatment recommendations.",
+      "tags": ["Python", "TensorFlow", "FastAPI", "React", "Computer Vision"],
+      "image": "assets/Projects/Detectx/Detex_Site.png",
+      "live_url": null,
+      "repo_url": "https://github.com/BASHITH144",
+      "year_or_status": "Individual Project · AI/ML",
+      "source": "https://basithahamad.vercel.app/"
+    }
+  ],
+  "contact": {
+    "heading": "LET'S CONNECT & CREATE SOMETHING AMAZING",
+    "name": "Basith Ahamad",
+    "role": "Software Engineer | AI Builder",
+    "email": "bashithahamed79@gmail.com",
+    "phone": "(+94) 76 2657472",
+    "linkedin_url": "https://www.linkedin.com/in/basith-ahamad",
+    "github_url": "https://github.com/BASHITH144"
+  },
+  "certificates": [
+    {
+      "id": 1,
+      "title": "Data Analytics Job Simulation",
+      "issuer": "Deloitte / Forage",
+      "description": "Practical tasks covering data analysis and forensic technology in a professional job simulation setting.",
+      "icon": "ph ph-chart-bar",
+      "icon_style": "",
+      "file": "assets/images/Courses Certificate/Data_Analytics_certificate.pdf"
+    },
+    {
+      "id": 2,
+      "title": "Innovating with Google Cloud AI",
+      "issuer": "Google Cloud / Simplilearn",
+      "description": "Fundamental concepts and practical applications of artificial intelligence solutions on the Google Cloud platform.",
+      "icon": "ph ph-cloud",
+      "icon_style": "cert-course-icon-cloud",
+      "file": "assets/images/Courses Certificate/Google_Cloud.pdf"
+    },
+    {
+      "id": 3,
+      "title": "Machine Learning Using Python",
+      "issuer": "Simplilearn SkillUp",
+      "description": "Fundamental and practical skills in building and implementing machine learning algorithms using Python.",
+      "icon": "ph ph-brain",
+      "icon_style": "cert-course-icon-ai",
+      "file": "assets/images/Courses Certificate/Machine_Learning_Certificate.pdf"
+    },
+    {
+      "id": 4,
+      "title": "WordPress Course",
+      "issuer": "DP Education IT Campus",
+      "description": "Core concepts and skills for web development and content management using WordPress.",
+      "icon": "ph ph-squares-four",
+      "icon_style": "cert-course-icon-wp",
+      "file": "assets/images/Courses Certificate/Wordpress Certificate.pdf"
+    }
+  ]
+}
