@@ -15835,27 +15835,18 @@ html, body {
     display: none !important;
   }
  .tw-offcanvas-2-left {
-  width: 100% !important;
-  /* Use dynamic viewport height (dvh) with a 100vh fallback for older browsers */
-  height: 100vh !important; 
-  height: 100dvh !important;
-  max-height: 100dvh !important;
-  
-  padding: 20px !important;
-  padding-top: 30px !important;
-  /* Extra bottom padding to ensure the last link is clear of mobile browser UI */
-  padding-bottom: 120px !important; 
-  
-  /* Enables smooth scrolling within the offcanvas container */
-  overflow-y: auto !important; 
-  -webkit-overflow-scrolling: touch; 
-  
   display: flex !important;
   flex-direction: column !important;
   justify-content: flex-start !important;
-  
-  /* Prevents content clipping */
-  box-sizing: border-box !important; 
+  height: 100dvh !important;
+  max-height: 100dvh !important;
+  overflow-y: auto !important;
+  padding-bottom: 100px !important; /* Space at bottom so last item is fully visible */
+}
+
+/* Ensure the wrapper inside offcanvas grows/scrolls properly */
+.tw-offcanvas-2-left > * {
+  flex-shrink: 0;
 }
   .twoffcanvas__logo {
     margin-bottom: 20px !important;
