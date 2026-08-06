@@ -7691,15 +7691,29 @@ input:focus-visible {
 }
 
 @media screen and (max-width: 767px) {
+  .tw-offcanvas-2-left .tw-main-menu-mobile {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    margin-top: 10px !important;
+  }
   .tw-offcanvas-2-left .tw-main-menu-mobile ul {
     grid-template-columns: 100% !important;
     column-gap: 0 !important;
+    row-gap: 10px !important;
   }
   .tw-offcanvas-2-area .tw-main-menu-mobile>nav>ul>li,
   .tw-offcanvas-2-area .tw-main-menu-mobile nav>ul>li,
   .tw-main-menu-mobile ul li {
     width: 100% !important;
     max-width: 100% !important;
+    padding-bottom: 8px !important;
+  }
+  .tw-main-menu-mobile ul li>a .menu-text {
+    font-size: clamp(20px, 3.2vh, 26px) !important;
+  }
+  .tw-main-menu-mobile ul li>a>i {
+    font-size: clamp(22px, 3.5vh, 28px) !important;
+    margin-right: 12px !important;
   }
 }
 
@@ -7800,7 +7814,7 @@ input:focus-visible {
 }
 
 .tw-offcanvas-2-wrapper .tw-offcanvas-2-left {
-  overflow-y: hidden; /* prevent scrolling inside left pane */
+  overflow-y: auto; /* allow scrolling inside left pane */
 }
 
 .tw-offcanvas-2-wrapper .left-box {
@@ -15792,16 +15806,17 @@ html, body {
     background: rgba(255, 255, 255, 0.1) !important;
     border: 1px solid rgba(255, 255, 255, 0.2) !important;
     border-radius: 12px !important;
-    padding: 8px 14px !important;
+    padding: 8px !important;
     backdrop-filter: blur(10px) !important;
     cursor: pointer !important;
     display: inline-flex !important;
     align-items: center !important;
-    gap: 8px !important;
+    justify-content: center !important;
+    width: 44px !important;
+    height: 44px !important;
   }
-  .tw-offcanvas-2-close-btn .text span {
-    font-size: 0.8rem !important;
-    color: #fff !important;
+  .tw-offcanvas-2-close-btn .text {
+    display: none !important;
   }
   .tw-offcanvas-2-close-btn svg {
     width: 24px !important;
@@ -15814,7 +15829,13 @@ html, body {
   .tw-offcanvas-2-left {
     width: 100% !important;
     padding: 20px !important;
-    padding-top: 80px !important;
+    padding-top: 60px !important;
+    overflow-y: auto !important;
+    max-height: 100vh !important;
+  }
+  .tw-offcanvas-2-left .tw-main-menu-mobile {
+    padding-left: 45px !important;
+    padding-right: 35px !important;
   }
   .tw-main-menu-mobile nav ul {
     gap: 4px !important;
