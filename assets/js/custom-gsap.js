@@ -1094,9 +1094,11 @@
       ? window.siteContent.hero.identity_titles
       : [
           "WEB DEVELOPER",
-          "FRONT-END DEVELOPER",
-          "WORDPRESS DEVELOPER",
+          "FRONT-END DEV",
+          "WORDPRESS DEV",
           "SOFTWARE ENGINEER",
+          "UI/UX DESIGNER",
+          "POSTER DESIGNER",
           "AUTOMATION BUILDER"
         ];
 
