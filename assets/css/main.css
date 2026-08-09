@@ -11531,6 +11531,7 @@ body.tw-magic-cursor #magic-cursor {
 .identity-space {
   display: inline-block;
   width: clamp(25px, 3.5vw, 65px);
+  flex-shrink: 0;
 }
 
 .banner-three-man {

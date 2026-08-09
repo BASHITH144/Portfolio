@@ -1105,12 +1105,12 @@
 
     function getFontSizeForText(text) {
       const len = text.length;
-      if (len > 16) {
-        return "clamp(40px, 6.5vw, 180px)";
-      } else if (len > 12) {
-        return "clamp(55px, 8.5vw, 230px)";
+      if (len > 14) {
+        return "clamp(75px, 12vw, 270px)";
+      } else if (len > 10) {
+        return "clamp(85px, 13vw, 280px)";
       } else {
-        return "clamp(75px, 11vw, 280px)";
+        return "clamp(95px, 14vw, 300px)";
       }
     }
 
