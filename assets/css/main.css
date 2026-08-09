@@ -11499,7 +11499,7 @@ body.tw-magic-cursor #magic-cursor {
   color: #111111;
   line-height: 0.83;
   text-align: center;
-  width: 100%;
+  width: max-content;
   display: flex;
   justify-content: center;
   align-items: center;
