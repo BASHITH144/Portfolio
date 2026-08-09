@@ -1103,6 +1103,11 @@
     let currentIndex = 0;
     let isAnimating = false;
 
+    // Kill any existing ghost loop if initialized multiple times (e.g. after JSON load)
+    if (container.heroTimer) {
+      container.heroTimer.kill();
+    }
+
     function getFontSizeForText(text) {
       const len = text.length;
       if (len > 14) {
@@ -1176,7 +1181,7 @@
           currentWordElem = nextWordElem;
           currentIndex = nextIndex;
           isAnimating = false;
-          gsap.delayedCall(3.5, transitionToNextWord);
+          container.heroTimer = gsap.delayedCall(3.5, transitionToNextWord);
         }
       });
 
@@ -1184,7 +1189,7 @@
       tl.to(incomingChars, { opacity: 1, y: 0, rotateX: 0, duration: 0.8, ease: "back.out(1.5)", stagger: 0.02 }, ">-0.1");
     }
 
-    gsap.delayedCall(3.5, transitionToNextWord);
+    container.heroTimer = gsap.delayedCall(3.5, transitionToNextWord);
 
     if (heroSection && bgWrapper) {
       const xTo = gsap.quickTo(bgWrapper, 'x', { duration: 0.8, ease: 'power2.out' });
