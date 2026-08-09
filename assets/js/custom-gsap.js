@@ -1105,12 +1105,12 @@
 
     function getFontSizeForText(text) {
       const len = text.length;
-      if (len > 14) {
-        return "clamp(75px, 12vw, 270px)";
-      } else if (len > 10) {
-        return "clamp(85px, 13vw, 280px)";
+      if (len > 16) {
+        return "clamp(40px, 6.5vw, 180px)";
+      } else if (len > 12) {
+        return "clamp(55px, 8.5vw, 230px)";
       } else {
-        return "clamp(95px, 14vw, 300px)";
+        return "clamp(75px, 11vw, 280px)";
       }
     }
 
@@ -1150,8 +1150,8 @@
     const initialChars = currentWordElem.querySelectorAll('.identity-char');
     gsap.fromTo(
       initialChars,
-      { opacity: 0, filter: 'blur(8px)', scale: 0.98 },
-      { opacity: 1, filter: 'blur(0px)', scale: 1, duration: 1.0, ease: 'power4.out', stagger: 0.02 }
+      { opacity: 0, scale: 0.98 },
+      { opacity: 1, scale: 1, duration: 1.0, ease: 'power4.out', stagger: 0.02 }
     );
 
     function transitionToNextWord() {
@@ -1165,7 +1165,7 @@
       const outgoingChars = currentWordElem.querySelectorAll('.identity-char');
       const incomingChars = nextWordElem.querySelectorAll('.identity-char');
 
-      gsap.set(incomingChars, { opacity: 0, filter: 'blur(8px)', scale: 0.98 });
+      gsap.set(incomingChars, { opacity: 0, scale: 0.98 });
 
       const tl = gsap.timeline({
         onComplete: () => {
@@ -1177,8 +1177,8 @@
         }
       });
 
-      tl.to(outgoingChars, { opacity: 0, filter: 'blur(8px)', scale: 1.01, duration: 0.8, ease: 'power4.out', stagger: 0.02 }, 0);
-      tl.to(incomingChars, { opacity: 1, filter: 'blur(0px)', scale: 1, duration: 0.8, ease: 'power4.out', stagger: 0.02 }, 0);
+      tl.to(outgoingChars, { opacity: 0, scale: 1.01, duration: 0.8, ease: 'power4.out', stagger: 0.02 }, 0);
+      tl.to(incomingChars, { opacity: 1, scale: 1, duration: 0.8, ease: 'power4.out', stagger: 0.02 }, 0);
     }
 
     gsap.delayedCall(3.5, transitionToNextWord);

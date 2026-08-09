@@ -11523,7 +11523,7 @@ body.tw-magic-cursor #magic-cursor {
   display: inline-flex;
   flex-shrink: 0;
   color: #111111;
-  will-change: transform, opacity, filter;
+  will-change: transform, opacity;
   backface-visibility: hidden;
   transform-style: preserve-3d;
 }
