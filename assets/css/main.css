@@ -11491,7 +11491,13 @@ body.tw-magic-cursor #magic-cursor {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
   white-space: nowrap;
+  font-family: "Teko", var(--tw-ff-shoulders, 'Outfit'), sans-serif !important;
   font-size: clamp(32px, 11vw, 420px);
   font-weight: 900;
   letter-spacing: clamp(-4px, -0.5vw, -1px);
@@ -11500,7 +11506,6 @@ body.tw-magic-cursor #magic-cursor {
   line-height: 0.83;
   text-align: center;
   width: max-content;
-  display: block;
   margin: 0;
   padding: 0;
   pointer-events: none;
@@ -11508,13 +11513,15 @@ body.tw-magic-cursor #magic-cursor {
 }
 
 .identity-char-wrap {
-  display: inline-block;
+  display: inline-flex;
+  flex-shrink: 0;
   overflow: visible;
   padding: 0 1px;
 }
 
 .identity-char {
-  display: inline-block;
+  display: inline-flex;
+  flex-shrink: 0;
   color: #111111;
   will-change: transform, opacity, filter;
   backface-visibility: hidden;
