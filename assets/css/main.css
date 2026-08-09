@@ -8901,18 +8901,21 @@ body.tw-magic-cursor #magic-cursor {
 @media screen and (max-width: 767px) {
   .banner-three-title {
     font-size: 123px;
+    letter-spacing: 5px;
   }
 }
 
 @media screen and (max-width: 575px) {
   .banner-three-title {
     font-size: 88px;
+    letter-spacing: 5px;
   }
 }
 
 @media screen and (max-width: 424px) {
   .banner-three-title {
     font-size: 78px;
+    letter-spacing: 5px;
   }
 }
 
