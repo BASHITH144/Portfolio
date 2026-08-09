@@ -1118,24 +1118,41 @@
       const wordDiv = document.createElement("div");
       wordDiv.className = "identity-word";
       wordDiv.style.fontSize = getFontSizeForText(text);
-      wordDiv.textContent = text;
-      
-      // Force absolute centering via GSAP later, set position here
       wordDiv.style.position = "absolute";
+      wordDiv.style.left = "50%";
+      wordDiv.style.top = "50%";
+      wordDiv.style.transform = "translate(-50%, -50%)";
       wordDiv.style.whiteSpace = "nowrap";
       wordDiv.style.margin = "0";
+      wordDiv.style.display = "block"; // prevents flexbox shrinking
+
+      const chars = text.split("");
+      chars.forEach((char) => {
+        const charSpan = document.createElement("span");
+        if (char === " ") {
+          charSpan.innerHTML = "&nbsp;";
+          charSpan.style.display = "inline-block";
+          charSpan.style.width = "clamp(20px, 3.5vw, 65px)";
+        } else {
+          charSpan.textContent = char;
+          charSpan.className = "identity-char";
+          charSpan.style.display = "inline-block";
+          charSpan.style.willChange = "transform, opacity";
+        }
+        wordDiv.appendChild(charSpan);
+      });
+
       return wordDiv;
     }
 
     let currentWordElem = createWordElement(identityTitles[currentIndex]);
     container.appendChild(currentWordElem);
 
-    // Initial positioning and reveal
-    gsap.set(currentWordElem, { top: "50%", left: "50%", xPercent: -50, yPercent: -50 });
+    let initialChars = currentWordElem.querySelectorAll('.identity-char');
     gsap.fromTo(
-      currentWordElem,
-      { opacity: 0, y: 30 },
-      { opacity: 1, y: 0, duration: 1.2, ease: "power3.out" }
+      initialChars,
+      { opacity: 0, y: 40, rotateX: -90 },
+      { opacity: 1, y: 0, rotateX: 0, duration: 1.0, ease: "back.out(1.7)", stagger: 0.03 }
     );
 
     function transitionToNextWord() {
@@ -1146,7 +1163,10 @@
       const nextWordElem = createWordElement(identityTitles[nextIndex]);
       container.appendChild(nextWordElem);
 
-      gsap.set(nextWordElem, { top: "50%", left: "50%", xPercent: -50, yPercent: -50, opacity: 0, y: 30 });
+      const outgoingChars = currentWordElem.querySelectorAll('.identity-char');
+      const incomingChars = nextWordElem.querySelectorAll('.identity-char');
+
+      gsap.set(incomingChars, { opacity: 0, y: 40, rotateX: -90 });
 
       const tl = gsap.timeline({
         onComplete: () => {
@@ -1160,14 +1180,12 @@
         }
       });
 
-      // Clean, sequential whole-word transition
-      tl.to(currentWordElem, { opacity: 0, y: -30, duration: 0.6, ease: "power2.inOut" }, 0);
-      tl.to(nextWordElem, { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }, 0.3);
+      tl.to(outgoingChars, { opacity: 0, y: -40, rotateX: 90, duration: 0.5, ease: "power2.in", stagger: 0.015 });
+      tl.to(incomingChars, { opacity: 1, y: 0, rotateX: 0, duration: 0.8, ease: "back.out(1.5)", stagger: 0.02 }, ">-0.1");
     }
 
     gsap.delayedCall(3.5, transitionToNextWord);
 
-    // Subtle parallax interaction limited to a few pixels
     if (heroSection && bgWrapper) {
       const xTo = gsap.quickTo(bgWrapper, 'x', { duration: 0.8, ease: 'power2.out' });
       const yTo = gsap.quickTo(bgWrapper, 'y', { duration: 0.8, ease: 'power2.out' });
