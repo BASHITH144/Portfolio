@@ -11500,9 +11500,7 @@ body.tw-magic-cursor #magic-cursor {
   line-height: 0.83;
   text-align: center;
   width: max-content;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
   margin: 0;
   padding: 0;
   pointer-events: none;
