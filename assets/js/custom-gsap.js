@@ -1177,8 +1177,8 @@
         }
       });
 
-      tl.to(outgoingChars, { opacity: 0, scale: 1.01, duration: 0.8, ease: 'power4.out', stagger: 0.02 }, 0);
-      tl.to(incomingChars, { opacity: 1, scale: 1, duration: 0.8, ease: 'power4.out', stagger: 0.02 }, 0);
+      tl.to(outgoingChars, { opacity: 0, scale: 1.05, duration: 0.4, ease: 'power2.in', stagger: 0.015 });
+      tl.to(incomingChars, { opacity: 1, scale: 1, duration: 0.6, ease: 'power3.out', stagger: 0.02 }, ">-0.1");
     }
 
     gsap.delayedCall(3.5, transitionToNextWord);
