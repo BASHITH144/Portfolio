@@ -1111,11 +1111,11 @@
     function getFontSizeForText(text) {
       const len = text.length;
       if (len > 14) {
-        return "clamp(75px, 12vw, 270px)";
+        return "clamp(35px, 12vw, 270px)";
       } else if (len > 10) {
-        return "clamp(85px, 13vw, 280px)";
+        return "clamp(45px, 13vw, 280px)";
       } else {
-        return "clamp(95px, 14vw, 300px)";
+        return "clamp(55px, 14vw, 300px)";
       }
     }
 
@@ -1137,7 +1137,7 @@
         if (char === " ") {
           charSpan.innerHTML = "&nbsp;";
           charSpan.style.display = "inline-block";
-          charSpan.style.width = "clamp(20px, 3.5vw, 65px)";
+          charSpan.style.width = "clamp(12px, 3vw, 65px)";
         } else {
           charSpan.textContent = char;
           charSpan.className = "identity-char";
